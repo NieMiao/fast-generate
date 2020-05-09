@@ -1,0 +1,48 @@
+package ${package}.${moduleName}.api;
+
+import java.util.Arrays;
+import java.util.Map;
+import io.swagger.annotations.ApiOperation;
+import ${mainPath}.common.utils.Result;
+
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Api(value="${comments}",description = "${comments}")
+public interface ${className}Api {
+
+    /**
+     * 列表
+     */
+    @ApiOperation("查询列表")
+    public Result list(Map<String, Object> params);
+
+    /**
+     * 信息
+     */
+    @ApiOperation("查询单个信息")
+    public Result info(${pk.attrType} ${pk.attrname});
+
+    /**
+     * 保存
+     */
+    @ApiOperation("保存单个信息")
+    public Result save(${className}Entity ${classname});
+
+    /**
+     * 修改
+     */
+    @ApiOperation("修改单个信息")
+    public Result update(${className}Entity ${classname});
+
+    /**
+     * 删除
+     */
+    @ApiOperation("删除")
+    public Result delete(${pk.attrType}[] ${pk.attrname}s);
+}
